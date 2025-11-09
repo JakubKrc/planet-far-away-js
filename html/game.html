@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Looser Soft</title>
+	
+	<style>
+	
+		body {
+			background-color:	black;
+			margin:				0;
+			image-rendering: 	-moz-crisp-edges;
+			image-rendering:	-webkit-crisp-edges;
+			image-rendering:	pixelated;
+			image-rendering:	crisp-edges;
+		} 
+		
+		.titleofprogramparent {
+			margin-top:2vh;
+			margin-bottom:8vh;
+			position: relative;
+			width:100vw;
+			height:35vh;
+		}
+		
+		.titleofprogramchild {
+			position: absolute;
+			left: 50%;
+			height:80%;
+			transform:		translate(-50%, 0);
+			opacity:0.5;
+			transition-duration: 1s;
+		}
+		
+		.titleofprogramchild:hover {
+		  opacity: 1;
+		}
+		
+		.popupclass {
+			position:absolute;
+			text-align: 		center;
+			width: 				98%;
+			padding:			1%;
+			bottom:0;
+			opacity:			0;
+			background-image:
+			radial-gradient(
+				#691212,
+				black
+			);
+            pointer-events:      none;
+		}
+		
+		.popupclass button,select:hover {
+			cursor: pointer;
+		}
+		
+		.popupclass select, button{
+			background-color: black;
+			border: 2px solid #4CAF50; /* Green */
+		}
+		
+		.popupclass a, select, button{
+			color:			green;
+			font-size:		1.3vw;
+			font-weight: 	bold;
+		}
+		
+		.titlesoft {
+			position: 	fixed;
+			left:		6%;
+			top:		85%;
+			width:		7%;
+			transform:		translate(-50%, -50%);
+			opacity:	0.3;
+			transition-duration: 2s;
+		}
+		
+		.titlesoft:hover {			
+			width:		10%;
+			opacity:	1;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div class="titleofprogramparent" style="margin-top:10%;">
+	
+		<a href="javascript:openclose();">
+			<img src="graphics/planetlogo.png"        
+                class="titleofprogramchild" alt="Planet far away">
+		</a> 
+	
+		<div id="popup" class="popupclass">
+				
+			<form action="planetfaraway.html">
+				
+				<button style="margin-right:1%;">Start episode:</button>
+				
+				<select name="episodes" style="margin-right:5%;">
+					<option value="Still almost nothing" >Still almost nothing</option>
+  					<option value="Almost nothing">Almost nothing</option>
+				</select> 
+				
+				<a href="readme.html">READ!.ME</a>	
+				
+			</form>
+		
+		</div>  
+	
+	</div> 
+	
+	<img src="logo.png" class="titlesoft" alt="Looser Soft" >		
+
+	<script>
+	
+		let open=false;
+		let popup=document.getElementById("popup");
+		let opacityx=0;
+		let transformx=70;
+	
+		window.onload = function() {
+			popup.style.opacity=0;
+			setInterval(openclosetransition,1000/30);
+		}
+	
+		function openclosetransition() {
+			if(opacityx<0.4&&open==true) opacityx+=0.025;
+			if(opacityx>0&&open==false) opacityx-=0.025;
+			opacityx=parseFloat(round(opacityx, 3));
+			if(transformx<70&&open==false) transformx+=4;
+			if(transformx>0&&open==true) transformx-=4;
+			popup.style.transform="translate(0,-"+transformx.toString()+"%)";
+			popup.style.opacity=opacityx;
+		}
+	
+		function openclose() {
+
+		  if (open==false) {
+                open=true;
+                popup.style.pointerEvents="auto";
+          } else {
+              open=false;
+              popup.style.pointerEvents="none";
+          }	
+
+		}
+		
+		function round(value, decimals) {
+			return Number(Math.round(value +'e'+ decimals) +'e-'+ decimals).toFixed(decimals);
+		}
+		
+	</script>
+
+</body>
+
+</html>

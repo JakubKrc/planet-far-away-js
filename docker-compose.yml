@@ -1,9 +1,9 @@
 services:
-  home-page:
+  PlanetFarAway-Js:
     image: nginx:alpine
-    container_name: homepage
+    container_name: PlanetFarAway-Js
     ports:
-      - "80:80"
+      - "82:80"
     volumes:
       - ./html:/usr/share/nginx/html
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
@@ -13,4 +13,4 @@ services:
 
 networks:
   apps_net:
-    external: true
+ #   external: true

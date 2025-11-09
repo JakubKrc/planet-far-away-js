@@ -1,4 +1,4 @@
-name: Deploy homepage to Hetzner
+name: Deploy PlanetFarAway1 to Hetzner
 
 on:
   workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd ~/home-page-app
+            cd ~/planet-far-away-1-app
             git pull origin main
 
             docker compose up --build -d

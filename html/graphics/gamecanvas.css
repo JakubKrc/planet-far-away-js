@@ -1,0 +1,84 @@
+		#gameCanvas {
+			position: absolute;
+			left:     50%;
+			transform:		translate(-50%, 0);
+			height:    98%;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -webkit-crisp-edges;
+			image-rendering: pixelated;
+			image-rendering: crisp-edges;
+		}
+		
+		#gameCanvas2 {
+			position: absolute;
+			right:     0;
+			height:    98%;
+			width:     8%;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -webkit-crisp-edges;
+			image-rendering: pixelated;
+			image-rendering: crisp-edges;
+		}
+
+        #selectobjects {
+			position: absolute;
+            top:      14%;
+			left:     1%;
+			height:    30%;
+			width:     8%;
+            border:     5px solid gray;
+            font-size:  0.8vw;
+		}
+
+		#objectvalue {
+			position: absolute;
+            top:      46%;
+			left:     1%;
+			height:    52%;
+			width:     12%;
+            border:     5px solid gray;
+            font-size:  0.8vw;
+			overflow-y: scroll;
+		}
+
+		#buttonobjectvaluesave {
+			position: absolute;
+            top:      41%;
+			left:     10%;
+		}
+
+		#buttonsetdimensionsgif {
+			position: absolute;
+            top:      38%;
+			left:     10%;
+		}
+
+        #frame2 {
+			position:  absolute;
+            top:       100%;
+			height:    30%;
+			width:     98%;
+            border:    1px solid red;
+            background: green;
+		}
+
+        #levelbuttons {
+            position: 	absolute;
+			left:		1%;
+			top:		2%;
+            width:      8%;
+            height:     7%;
+            padding:    10px;
+            border:     5px solid gray;
+            margin:     0;
+            font-size:  0.8vw;
+        }
+
+        .button, .input {
+            font-size:  0.8vw;
+        }
+
+        .input {
+            width:      90%;
+            font-size:  0.8vw;
+        }

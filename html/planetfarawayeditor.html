@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Planet Far Away Editor</title>
+	
+    <link rel="stylesheet" href="graphics/gamecanvas.css"/>
+	
+</head>
+	
+<body bgcolor="black" onwheel="event.preventDefault();">
+	
+    <div id="levelbuttons">
+        Level File
+        <input type="text" class="input" name="levelfile"/>
+
+        <button class="button" onclick="Stillalmostnothing(0)">load</button>
+        <button class="button" onclick="writelevel()">write</button>
+
+	</div>
+
+	<select  multiple id="selectobjects">
+		<option value ="nothing" selected>nothing</option>
+		<option value ="sprite" >sprite</option>
+		<option value ="collisionbox" >collisionbox</option>
+		<option value ="leveltransitionclass">leveltransitionclass</option>
+		<option value ="healthitem">healthitem</option>
+		<option value ="basicenemyclass">basicenemyclass</option>
+		<option value ="flyingenemyclass">flyingenemyclass</option>
+		<option value ="jumpingdwarfclass">jumpingdwarfclass</option>
+	</select> 
+	
+	<button class="button" id="buttonobjectvaluesave" onclick="saveValuesObjects()">saveV</button>
+	<button class="button" id="buttonsetdimensionsgif" onclick="buttonsetdimensionsgif()">dimensions</button>
+	
+	<div id="objectvalue"></div>
+
+	<canvas id="gameCanvas" oncontextmenu="event.preventDefault();" width="320" height="240"></canvas>
+	<canvas id="gameCanvas2" onwheel="event.preventDefault();" width="48" height="224"></canvas>
+
+    <iframe id="frame2"></iframe>
+	
+    <script src="js/shared/sharedmain.js"></script>
+	<script src="js/shared/objekt.js"></script>
+    <script src="js/shared/draw.js"></script>
+	<script src="js/shared/loadimages.js"></script>
+	<script src="js/editor/mousemovement.js"></script>
+	<script src="js/editor/writelevel.js"></script>
+	<script src="js/editor/objectseditor.js"></script>
+	<script src="js/editor/editormain.js"></script>
+	
+	<script src="js/shared/Almostnothing.js"></script>
+	<script src="js/shared/Stillalmostnothing.js"></script>
+	
+</body>
+</html>
