@@ -251,6 +251,8 @@ objectmob = function(imagenum, x, y, width, height, life, checkForDirectionalCha
 			this.x -= howmuch
 				
 		}
+		
+		this.x = Math.round(this.x);
 			
 	}
 	
@@ -280,6 +282,8 @@ objectmob = function(imagenum, x, y, width, height, life, checkForDirectionalCha
 			this.x += howmuch
 				
 		}
+		
+		this.x = Math.round(this.x);
 		
 	}
 	
