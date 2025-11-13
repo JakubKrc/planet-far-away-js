@@ -3,7 +3,7 @@ let gameInterval;
 let episode
 let transitionCheckpoint = { level : "XXXX", leveltransitionname : "XXXX"}
 let menuRow=1;
-let menuMoje=1;
+let menuMoje=0;
 let menuReadMe=0;
 
 window.onload = function() {

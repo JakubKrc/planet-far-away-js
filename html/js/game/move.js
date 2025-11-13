@@ -133,6 +133,9 @@ function winGame() {
 }
 
 function menu() {
+
+	if(menuReadMe!=1)
+		canvasCtx.drawImage(gamePic[59],0, 0);
 	
 	if(menuMoje==1){
 		canvasCtx.drawImage(gamePic[59],0, 0);
@@ -156,9 +159,13 @@ function menu() {
 			canvasCtx.fillStyle = "red"; 
 		 } else if(transitionCheckpoint.level == "XXXX") canvasCtx.fillStyle = "black"; else canvasCtx.fillStyle="blue";
 		  canvasCtx.textAlign = "center";
-		  canvasCtx.fillText("Checkpoint", canvas.width/2, canvas.height/2); 
+		  if(transitionCheckpoint.level == "XXXX"){
+		  	canvasCtx.fillText("Checkpoint", canvas.width/2, canvas.height/2-7); 
+			canvasCtx.fillText("(not set)", canvas.width/2, canvas.height/2+2); 
+		  }else
+			canvasCtx.fillText("Checkpoint", canvas.width/2, canvas.height/2); 
 		  if(menuRow == 1) canvasCtx.fillStyle = "red"; else canvasCtx.fillStyle="blue"
-		  canvasCtx.fillText("NEW GAME", canvas.width/2, canvas.height/2+20);
+		  canvasCtx.fillText("Restart Episode", canvas.width/2, canvas.height/2+20);
 		 if(menuRow == 2) canvasCtx.fillStyle = "red"; else canvasCtx.fillStyle="blue"
 		  canvasCtx.fillText("ReadMe", canvas.width/2, canvas.height/2+40);
 	}
