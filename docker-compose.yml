@@ -13,4 +13,4 @@ services:
 
 networks:
   apps_net:
- #   external: true
+    external: true
