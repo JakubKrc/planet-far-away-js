@@ -42,6 +42,8 @@ window.onload = function() {
 
     ifrm = document.getElementById('frame2');
     ifrm = ifrm.contentWindow || ifrm.contentDocument.document || ifrm.contentDocument;
+
+	Stillalmostnothing(0)
 	
 }
 

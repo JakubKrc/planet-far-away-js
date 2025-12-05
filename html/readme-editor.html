@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>PlanetFarAway - readme-editor</title>
+	
+	<style>
+	
+		body {
+			background-color:	black;
+			margin:				0;
+			image-rendering: 	-moz-crisp-edges;
+			image-rendering:	-webkit-crisp-edges;
+			image-rendering:	pixelated;
+			image-rendering:	crisp-edges;
+		} 
+		
+		.titleofprogramchild {
+			position: absolute;
+			left: 50%;
+			width: 26%;
+			transform: translate(-50%, 0%);
+			opacity:0.7;
+		}
+		
+		.titlesoft {
+			position: 	fixed;
+			left:		6%;
+			top:		85%;
+			width:		7%;
+			transform:		translate(-50%, -50%);
+			transition-duration: 2s;
+		}
+		
+		.titlesoft:hover {			
+			width:		10%;
+			opacity:	1;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div style="margin-top:3%;">
+	
+		<div>
+			<img src="graphics/planetlogo.png"        
+                class="titleofprogramchild" alt="Planet far away">
+		</div> 
+	
+		<div style="text-align: center; color: blue; font-size: 1vw">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			Planet Far Away Editor   prealpha version -0.00010065484<br>
+			<br><br>
+			disclaimer: nobody should use this<br>
+            <br>
+            WSAD: moving screen<br>
+            Left Click: set selected tile. Beware!: in tiles there are also not just tiles.<br>
+            Q: toggle collisionbox rendering.<br>
+            You can erase tile by selecting 11. tile.<br>
+            By clicking write it will generate js code in green box hidden down, you need to scroll there.<br>
+            You can try load levels (level1, level2)<br>
+            Use scroll wheel to scroll tiles. Have to hover above tile selection.<br>
+            Right click will put into level object you have selected in left middle table.<br>
+            You can drag object by clicking and holding right mouse button.<br>
+            You can change image to any object by changing imagenum in bottom left table. Have to click 'saveV'. <br>
+            'dimensions' button is for setting dimensions to selected object according to its image. Then you have to 'saveV'.<br>
+            And so on. It is possible to use this but its quite glitchy and unintuitive. But was used to create all playable levels.<br>
+            <br>
+            Episode select is currently hardcoded in html.<br>
+			
+			<br>
+			<br>
+			<br>
+			<a href="game.html" >GO BACK TO MENU</a>
+		</div>	
+	
+	</div> 
+	
+	<img src="logo.png" class="titlesoft" alt="Looser Soft" >		
+
+</body>
+
+</html>
